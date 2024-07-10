@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bíblia e Harpa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>BÍBLIA E HARPA</h1>
+    </header>
+    <div class="tabs">
+        <button class="tablink active" onclick="openTab(event, 'biblia')">Bíblia</button>
+        <button class="tablink" onclick="openTab(event, 'harpa')">Harpa</button>
+    </div>
+    <div id="biblia" class="tabcontent">
+        <main>
+            <div class="container">
+                <div class="search-bar">
+                    <input type="text" id="bookInput" placeholder="Digite o livro da Bíblia">
+                    <input type="text" id="chapterInput" placeholder="Capítulo:Versículo">
+                    <button onclick="searchVerse()">Buscar</button>
+                </div>
+                <div id="verseContent">
+                    <!-- Aqui será inserido o conteúdo do versículo da Bíblia -->
+                </div>
+                <div class="navigation-buttons">
+                    <button id="prevButton" onclick="navigateVerse(-1)">&#9664; Anterior</button>
+                    <button id="nextButton" onclick="navigateVerse(1)">Próximo &#9654;</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div id="harpa" class="tabcontent">
+        <main>
+            <div class="container">
+                <div class="iframe-container">
+                    <iframe id="harpaIframe" src="https://www.harpacrista.org/"></iframe>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>© IGREJA UNIVERSAL DOS FILHOS DE DEUS</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
